@@ -3,7 +3,9 @@
 var todos = ['item 1', 'item 2', 'item 3', 'item 4'];
 
 // It should have a way to display todos
-// console.log ("My Todos: ",todos);
+function displayTodos(){
+    console.log ("My Todos: ",todos);
+}
 
 // It should have a way to add new todos
 todos.push("item 5");
