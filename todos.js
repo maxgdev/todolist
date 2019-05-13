@@ -1,11 +1,15 @@
 // It should store the todos array on an object
 var todoList = {
-    todos: ['item 1', 'item 2', 'item 3', 'item 4'],
+    // empty array for addTodo objects
+    todos: [],
     displayTodos: function(){
         console.log ("My Todos: ", this.todos);
     },
-    addTodo: function(todo){
-        this.todos.push(todo);
+    addTodo: function(todoText){
+        this.todos.push({
+            todoText: todoText,
+            completed: false
+        });
         this.displayTodos();
     },
     changeTodo: function(position, changedTodo){
@@ -26,13 +30,15 @@ todoList.displayTodos();
 
 // It should have a function to add new todos
 // added addTodo to todoList object
-todoList.addTodo('New item');
-todoList.addTodo('Another item');
+todoList.addTodo('first todo');
+todoList.addTodo('second todo');
+todoList.addTodo('third todo');
+todoList.addTodo('last todo');
 
 // It should have a function to change a todo
 // added changeTodo function/method to todoList object
-todoList.changeTodo(2, 'ChangedTodo - Changed item!');
+// todoList.changeTodo(2, 'ChangedTodo - Changed item!');
 
 // It should have a function to delete a todo
 // added deleteTodo function/method to todoList object
-todoList.deleteTodo(3);
+// todoList.deleteTodo(3);
