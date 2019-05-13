@@ -36,5 +36,5 @@ V5 Requirements
 .displayTodos should show .completed
 
 V6 Requirements
-.toggleAll: if everthing's true, make everything false
+.toggleAll: if everything's true, make everything false
 .toggleAll: Otherwise, make everything true

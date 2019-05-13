@@ -3,7 +3,7 @@ var todoList = {
     // empty array for addTodo objects
     todos: [],
     displayTodos: function(){
-        if(this.todos.length <1){
+        if(this.todos.length === 0){
             console.log('Your todoList is EMPTY!');
 
         } else {
@@ -39,6 +39,34 @@ var todoList = {
         var howManyToDelete = 1 // we are only deleting I item
         this.todos.splice(position, howManyToDelete);
         this.displayTodos();
+    },
+    toggleAll: function(){
+        // .toggleAll: if everthing's true, make everything false
+        // .toggleAll: Otherwise, make everything true
+        var totalTodos = this.todos.length; // total no# of todos
+        var completedTodos = 0; //count how many are complete
+        // let's loop through and count completedTodos
+        for(var i=0; i < totalTodos; i++){
+            if(this.todos[i].completed === true){
+                completedTodos = completedTodos+1;
+            }
+        }
+        // is completed todos the same as total todos
+        if(completedTodos === totalTodos){
+            // make everything false 
+            // loop through and make everything false
+            for(var i=0; i < totalTodos; i++){
+                this.todos[i].completed = false;
+            }
+        } else {
+            // make everytrhing true
+            // loop through and make everything true
+            for(var i=0; i < totalTodos; i++){
+                this.todos[i].completed = true;
+            }
+        }
+        this.displayTodos();
+
     }
 }
 
@@ -61,4 +89,8 @@ todoList.toggleCompleted(3);
 // It should have a function to delete a todo
 todoList.deleteTodo(3);
 
-
+// lets toggleAll
+todoList.toggleAll();
+todoList.toggleAll();
+todoList.toggleAll();
+todoList.toggleAll();
