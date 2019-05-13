@@ -8,7 +8,12 @@ var todoList = {
 
         } else {
             for(var i=0; i < this.todos.length; i++){
-                console.log ("Position: "+i+ ' todoText: ' + this.todos[i].todoText);
+                if(this.todos[i].completed === true){
+                    console.log ("[x] : "+i+ ' todoText: ' + this.todos[i].todoText);
+
+                } else {
+                    console.log ("[ ] : "+i+ ' todoText: ' + this.todos[i].todoText);
+                }
             }
             console.log('-------------------------------');
         }
@@ -45,7 +50,6 @@ todoList.displayTodos();
 
 // It should have a function to add new todos
 // added addTodo to todoList object
-/*
 
 todoList.addTodo('first todo');
 todoList.addTodo('second todo');
@@ -64,5 +68,4 @@ todoList.toggleCompleted(3);
 // added deleteTodo function/method to todoList object
 todoList.deleteTodo(3);
 
-*/
 
