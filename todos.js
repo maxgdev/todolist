@@ -11,6 +11,12 @@ var todoList = {
     changeTodo: function(position, changedTodo){
         this.todos[position] = changedTodo;
         this.displayTodos();
+    },
+    deleteTodo: function(position){
+        // position - where to start delete
+        var howManyToDelete = 1 // we are only deleting I item
+        this.todos.splice(position, howManyToDelete);
+        this.displayTodos();
     }
 }
 
@@ -25,18 +31,15 @@ todoList.addTodo('Another item');
 
 // It should have a function to change a todo
 // added changeTodo function/method to todoList object
-// var index = 1; // index variable to indicate which todo  we want changed
-/* function changeTodo(position, changedTodo){
-    todos[position] = changedTodo;
-    displayTodos();
-} */
 todoList.changeTodo(2, 'ChangedTodo - Changed item!');
 
 // It should have a function to delete a todo
-function deleteTodo(position){
+// added deleteTodo function/method to todoList object
+/* function deleteTodo(position){
     // position - where to start delete
 var howManyToDelete = 1 // we are only deleting I item
 todos.splice(position, howManyToDelete);
 displayTodos();
-}
-deleteTodo(3);
+} */
+
+todoList.deleteTodo(3);
