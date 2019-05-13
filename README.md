@@ -25,3 +25,9 @@ It should have a displayTodos method
 It should have a addTodo method
 It should have a changeTodo method
 It should have a deleteTodo method
+
+V4 Requirements
+todoList.addTodo should add objects
+todoList.changeodo should change the todoText property
+todoList.toggleCompleted should change the completed property
+

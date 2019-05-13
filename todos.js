@@ -35,11 +35,4 @@ todoList.changeTodo(2, 'ChangedTodo - Changed item!');
 
 // It should have a function to delete a todo
 // added deleteTodo function/method to todoList object
-/* function deleteTodo(position){
-    // position - where to start delete
-var howManyToDelete = 1 // we are only deleting I item
-todos.splice(position, howManyToDelete);
-displayTodos();
-} */
-
 todoList.deleteTodo(3);
