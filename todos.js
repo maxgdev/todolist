@@ -50,4 +50,4 @@ todoList.toggleCompleted(3);
 
 // It should have a function to delete a todo
 // added deleteTodo function/method to todoList object
-// todoList.deleteTodo(3);
+todoList.deleteTodo(3);
