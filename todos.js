@@ -3,23 +3,26 @@ var todoList = {
     todos: ['item 1', 'item 2', 'item 3', 'item 4'],
     displayTodos: function(){
         console.log ("My Todos: ", this.todos);
+    },
+    addTodo: function(todo){
+        this.todos.push(todo);
+        this.displayTodos();
     }
 }
 
 
 // It should have a function to display todos
-/* function displayTodos(){
-    console.log ("My Todos: ",todos);
-} */
+// added displayTodo to todoList object
 todoList.displayTodos();
 
 // It should have a function to add new todos
-function addTodo(todo){
+// added addTodo to todoList object
+/* function addTodo(todo){
     todos.push(todo);
     displayTodos();
-}
-addTodo('New item');
-addTodo('Another item');
+} */
+todoList.addTodo('New item');
+todoList.addTodo('Another item');
 
 // It should have a function to change a todo
 // var index = 1; // index variable to indicate which todo  we want changed
