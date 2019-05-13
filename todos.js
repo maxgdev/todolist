@@ -6,9 +6,13 @@ var todos = ['item 1', 'item 2', 'item 3', 'item 4'];
 function displayTodos(){
     console.log ("My Todos: ",todos);
 }
+displayTodos;
 
 // It should have a way to add new todos
-todos.push("item 5");
+function addTodo(){
+    todos.push("New item");
+}
+addTodo();
 console.log ("My Todos: ",todos);
 
 // It should have a way to change a todo
