@@ -17,12 +17,18 @@ addTodo('New item');
 addTodo('Another item');
 
 // It should have a way to change a todo
-var index = 1; // index variable to indicate which todo  we want changed
-todos[index] = "Changed item";
-displayTodos();
+// var index = 1; // index variable to indicate which todo  we want changed
+function changeTodo(position, changedTodo){
+    todos[position] = changedTodo;
+    displayTodos();
+}
+changeTodo(2, 'Changed item!');
 
 // It should have a way to delete a todo
-var deleteStart = 0 // where to start delete
+function deleteTodo(position){
+    // position - where to start delete
 var howManyToDelete = 1 // we are only deleting I item
-todos.splice(deleteStart, howManyToDelete);
+todos.splice(position, howManyToDelete);
 displayTodos();
+}
+deleteTodo(0);
