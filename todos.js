@@ -7,9 +7,12 @@ var todoList = {
     addTodo: function(todo){
         this.todos.push(todo);
         this.displayTodos();
+    },
+    changeTodo: function(position, changedTodo){
+        this.todos[position] = changedTodo;
+        this.displayTodos();
     }
 }
-
 
 // It should have a function to display todos
 // added displayTodo to todoList object
@@ -17,20 +20,17 @@ todoList.displayTodos();
 
 // It should have a function to add new todos
 // added addTodo to todoList object
-/* function addTodo(todo){
-    todos.push(todo);
-    displayTodos();
-} */
 todoList.addTodo('New item');
 todoList.addTodo('Another item');
 
 // It should have a function to change a todo
+// added changeTodo function/method to todoList object
 // var index = 1; // index variable to indicate which todo  we want changed
-function changeTodo(position, changedTodo){
+/* function changeTodo(position, changedTodo){
     todos[position] = changedTodo;
     displayTodos();
-}
-changeTodo(2, 'Changed item!');
+} */
+todoList.changeTodo(2, 'ChangedTodo - Changed item!');
 
 // It should have a function to delete a todo
 function deleteTodo(position){
