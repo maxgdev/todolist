@@ -13,3 +13,9 @@ console.log ("My Todos: ",todos);
 var index = 1; // index variable to indicate which todo  we want changed
 todos[index] = "Changed item";
 console.log ("My Todos: ",todos);
+
+// It should have a way to delete a todo
+var deleteStart = 0 // where to start delete
+var howManyToDelete = 1 // we are only deleting I item
+todos.splice(deleteStart, howManyToDelete);
+console.log ("My Todos: ",todos);
