@@ -36,3 +36,6 @@ V5 Requirements
 .displayTodos should tell you if .todos is empty
 .displayTodos should show .completed
 
+V6 Requirements
+.toggleAll: if everthing's true, make everything false
+.toggleAll: Otherwise, make everything true

@@ -43,21 +43,15 @@ var todoList = {
 }
 
 // It should have a function to display todos
-// added displayTodo to todoList object
-//.displayTodos should show .todoText
-//.displayTodos should tell you if .todos is empty
 todoList.displayTodos();
 
 // It should have a function to add new todos
-// added addTodo to todoList object
-
 todoList.addTodo('first todo');
 todoList.addTodo('second todo');
 todoList.addTodo('third todo');
 todoList.addTodo('last todo');
 
 // It should have a function to change a todo
-// added changeTodo function/method to todoList object
 todoList.changeTodo(3, 'ChangedTodo - Final todo!');
 
 // todoList.toggleCompleted should change the completed property
@@ -65,7 +59,6 @@ todoList.toggleCompleted(0);
 todoList.toggleCompleted(3);
 
 // It should have a function to delete a todo
-// added deleteTodo function/method to todoList object
 todoList.deleteTodo(3);
 
 
