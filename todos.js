@@ -3,7 +3,10 @@ var todoList = {
     // empty array for addTodo objects
     todos: [],
     displayTodos: function(){
-        console.log ("My Todos: ", this.todos);
+        for(var i=0; i < this.todos.length; i++){
+            console.log ("Position: "+i+ ' todoText: ' + this.todos[i].todoText);
+        }
+        console.log('-------------------------------');
     },
     addTodo: function(todoText){
         this.todos.push({
