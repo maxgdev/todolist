@@ -9,19 +9,20 @@ function displayTodos(){
 displayTodos;
 
 // It should have a way to add new todos
-function addTodo(){
-    todos.push("New item");
+function addTodo(todo){
+    todos.push(todo);
+    displayTodos;
 }
 addTodo();
-console.log ("My Todos: ",todos);
+
 
 // It should have a way to change a todo
 var index = 1; // index variable to indicate which todo  we want changed
 todos[index] = "Changed item";
-console.log ("My Todos: ",todos);
+displayTodos;
 
 // It should have a way to delete a todo
 var deleteStart = 0 // where to start delete
 var howManyToDelete = 1 // we are only deleting I item
 todos.splice(deleteStart, howManyToDelete);
-console.log ("My Todos: ",todos);
+displayTodos;
