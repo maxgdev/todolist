@@ -18,3 +18,10 @@ It should have a function to display todos
 It should have a function to add new todos
 It should have a function to change a todo
 It should have a function to delete a todo
+
+V3 Requirements using Objects
+It should store the todos arrayy on an object
+It should have a displayTodos method
+It should have a addTodo method
+It should have a changeTodo method
+It should have a deleteTodo method
