@@ -12,8 +12,8 @@ var todoList = {
         });
         this.displayTodos();
     },
-    changeTodo: function(position, changedTodo){
-        this.todos[position] = changedTodo;
+    changeTodo: function(position, changedTodoText){
+        this.todos[position].todoText = changedTodoText;
         this.displayTodos();
     },
     deleteTodo: function(position){
@@ -37,7 +37,7 @@ todoList.addTodo('last todo');
 
 // It should have a function to change a todo
 // added changeTodo function/method to todoList object
-// todoList.changeTodo(2, 'ChangedTodo - Changed item!');
+todoList.changeTodo(3, 'ChangedTodo - Final todo!');
 
 // It should have a function to delete a todo
 // added deleteTodo function/method to todoList object
