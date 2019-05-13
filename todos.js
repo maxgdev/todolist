@@ -3,10 +3,15 @@ var todoList = {
     // empty array for addTodo objects
     todos: [],
     displayTodos: function(){
-        for(var i=0; i < this.todos.length; i++){
-            console.log ("Position: "+i+ ' todoText: ' + this.todos[i].todoText);
+        if(this.todos.length <1){
+            console.log('Your todoList is EMPTY!');
+
+        } else {
+            for(var i=0; i < this.todos.length; i++){
+                console.log ("Position: "+i+ ' todoText: ' + this.todos[i].todoText);
+            }
+            console.log('-------------------------------');
         }
-        console.log('-------------------------------');
     },
     addTodo: function(todoText){
         this.todos.push({
@@ -34,10 +39,14 @@ var todoList = {
 
 // It should have a function to display todos
 // added displayTodo to todoList object
+//.displayTodos should show .todoText
+//.displayTodos should tell you if .todos is empty
 todoList.displayTodos();
 
 // It should have a function to add new todos
 // added addTodo to todoList object
+/*
+
 todoList.addTodo('first todo');
 todoList.addTodo('second todo');
 todoList.addTodo('third todo');
@@ -54,3 +63,6 @@ todoList.toggleCompleted(3);
 // It should have a function to delete a todo
 // added deleteTodo function/method to todoList object
 todoList.deleteTodo(3);
+
+*/
+
