@@ -94,3 +94,15 @@ todoList.toggleAll();
 todoList.toggleAll();
 todoList.toggleAll();
 todoList.toggleAll();
+
+/* V7 Requirements code
+Clicking "Display todos" should run todoList.displayTodos
+Clicking "Toggle all" should run todoList.toggleAll
+*/
+var displayTodosBtn = document.getElementById('displayTodosBtn');
+var toggleAllBtn = document.getElementById('toggleAllBtn');
+
+displayTodosBtn.addEventListener('click', function(){
+    console.log('displayTodosBtn Clicked');
+    todoList.displayTodos();
+});
