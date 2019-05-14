@@ -95,19 +95,15 @@ todoList.toggleAll();
 todoList.toggleAll();
 todoList.toggleAll();
 
-/* V7 Requirements code
-Clicking "Display todos" should run todoList.displayTodos
-Clicking "Toggle all" should run todoList.toggleAll
-*/
-var displayTodosBtn = document.getElementById('displayTodosBtn');
-var toggleAllBtn = document.getElementById('toggleAllBtn');
-
-displayTodosBtn.addEventListener('click', function(){
-    console.log('displayTodosBtn Clicked');
-    todoList.displayTodos();
-});
-
-toggleAllBtn.addEventListener('click', function(){
-    console.log('toggleAllBtn Clicked');
-    todoList.toggleAll();
-});
+/* V8 Requirements code */
+// Refactoring code for readablity and DRY
+var handlers = {
+    displayTodos: function(){
+        console.log('displayTodosBtn Clicked');
+        todoList.displayTodos();
+    },
+    toggleAll: function(){
+        console.log('toggleAllBtn Clicked');
+        todoList.toggleAll();
+    }
+}
