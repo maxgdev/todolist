@@ -21,28 +21,25 @@ var todoList = {
         this.todos.splice(position, howManyToDelete);
     },
     toggleAll: function(){
-        // .toggleAll: if everthing's true, make everything false
-        // .toggleAll: Otherwise, make everything true
         var totalTodos = this.todos.length; // total no# of todos
         var completedTodos = 0; //count how many are complete
-        for(var i=0; i < totalTodos; i++){
-            if(this.todos[i].completed === true){
-                completedTodos = completedTodos+1;
+        this.todos.forEach(function(todo){
+            if(todo.completed === true){
+                completedTodos++;
             }
-        }
+        });
+
         // is completed todos the same as total todos
         if(completedTodos === totalTodos){
             // make everything false 
-            // loop through and make everything false
-            for(var i=0; i < totalTodos; i++){
-                this.todos[i].completed = false;
-            }
+            this.todos.forEach(function(todo){
+                todo.completed = false;
+            });
         } else {
             // make everytrhing true
-            // loop through and make everything true
-            for(var i=0; i < totalTodos; i++){
-                this.todos[i].completed = true;
-            }
+            this.todos.forEach(function(todo){
+                todo.completed = true;
+            });
         }
     }
 }
