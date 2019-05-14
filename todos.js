@@ -109,8 +109,15 @@ var view = {
                 todoTextWithCompletion = ' [ ] ' + todo.todoText
             }
             todoLi.textContent = todoTextWithCompletion;
+            todoLi.appendChild(this.createDeleteButton());
             todosUl.appendChild(todoLi);
         }
+    },
+    createDeleteButton: function(){
+        var deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.className = 'deleteButton';
+        return deleteButton;
     }
-}
+};
 view.displayTodos();
