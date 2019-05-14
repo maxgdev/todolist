@@ -38,3 +38,9 @@ V5 Requirements
 V6 Requirements
 .toggleAll: if everything's true, make everything false
 .toggleAll: Otherwise, make everything true
+
+V7 Requirements
+It should have a "Display todos" and "Toggle all" button in the app
+Clicking "Display todos" should run todoList.displayTodos
+Clicking "Toggle all" should run todoList.toggleAll
+
