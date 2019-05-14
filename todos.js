@@ -28,7 +28,6 @@ var todoList = {
                 completedTodos++;
             }
         });
-
         // is completed todos the same as total todos
         if(completedTodos === totalTodos){
             // make everything false 
@@ -44,7 +43,7 @@ var todoList = {
     }
 }
 
-// hardware data entered - DELETE in V11
+// hardwired data entered - DELETE in V11
 todoList.addTodo('first todo');
 todoList.addTodo('second todo');
 todoList.addTodo('third todo');
@@ -72,8 +71,6 @@ var handlers = {
         view.displayTodos();
     },
     deleteTodo: function(position){
-        // var deleteTodoPosition = document.getElementById('deleteTodoPosition');
-        // todoList.deleteTodo(deleteTodoPosition.valueAsNumber);
         todoList.deleteTodo(position);
         // deleteTodoPosition.value = '';
         view.displayTodos();
@@ -96,9 +93,8 @@ var view = {
     displayTodos: function(){
         var todosUl = document.querySelector('ul'); // find UL element
         todosUl.innerHTML = ''; // clear ul element before loop
-        for(var i=0; i< todoList.todos.length; i++){
+        todoList.todos.forEach(function(todo, index){
             var todoLi = document.createElement('li');
-            var todo = todoList.todos[i];
             var todoTextWithCompletion = '';
 
             if(todo.completed === true){
@@ -106,11 +102,11 @@ var view = {
             } else {
                 todoTextWithCompletion = ' [ ] ' + todo.todoText
             }
-            todoLi.id = i;
+            todoLi.id = index;
             todoLi.textContent = todoTextWithCompletion;
             todoLi.appendChild(this.createDeleteButton());
             todosUl.appendChild(todoLi);
-        }
+        }, this); // passing 'this' into forEach function
     },
     createDeleteButton: function(){
         var deleteButton = document.createElement('button');
