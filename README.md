@@ -44,3 +44,9 @@ It should have a "Display todos" and "Toggle all" button in the app
 Clicking "Display todos" should run todoList.displayTodos
 Clicking "Toggle all" should run todoList.toggleAll
 
+V8 Requirements
+It should have working controls for .addTodo
+It should have working controls for .changeTodo
+It should have working controls for .deleteTodo
+It should have working controls for .toggleCompleted
+
