@@ -98,6 +98,7 @@ var handlers = {
     displayTodos: function(){
         console.log('displayTodosBtn Clicked');
         todoList.displayTodos();
+        view.displayTodos();
     },
     addTodo: function(){
         console.log('addTodo Clicked');
@@ -133,3 +134,18 @@ var handlers = {
     }
     
 }
+
+// Exit the console
+var view = {
+    displayTodos: function(){
+        var todosUl = document.querySelector('ul'); // find UL element
+        todosUl.innerHTML = ''; // clear ul element before loop
+        for(var i=0; i< todoList.todos.length; i++){
+            var todoLi = document.createElement('li');
+            todoLi.textContent = todoList.todos[i].todoText;
+            todosUl.appendChild(todoLi);
+
+        }
+    }
+}
+view.displayTodos();
