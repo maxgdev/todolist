@@ -120,6 +120,13 @@ var handlers = {
         todoList.changeTodo(changeTodoPosition.valueAsNumber, changeTodoTextInput.value);
         changeTodoPosition.value = '';
         changeTodoTextInput.value = '';
+    },
+    deleteTodo: function(){
+        console.log('deleteTodo Clicked');
+        var deleteTodoPosition = document.getElementById('deleteTodoPosition');
+        console.log(deleteTodoPosition.valueAsNumber);
+        todoList.deleteTodo(deleteTodoPosition.valueAsNumber);
+        deleteTodoPosition.value = '';
     }
     
 }
