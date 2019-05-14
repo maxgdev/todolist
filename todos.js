@@ -106,3 +106,8 @@ displayTodosBtn.addEventListener('click', function(){
     console.log('displayTodosBtn Clicked');
     todoList.displayTodos();
 });
+
+toggleAllBtn.addEventListener('click', function(){
+    console.log('toggleAllBtn Clicked');
+    todoList.toggleAll();
+});
