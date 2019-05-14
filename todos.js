@@ -4,7 +4,7 @@ var todoList = {
     todos: [],
     displayTodos: function(){
         if(this.todos.length === 0){
-            console.log('Your todoList is EMPTY!');
+            console.log('Your Todo List is EMPTY!');
 
         } else {
             for(var i=0; i < this.todos.length; i++){
@@ -66,7 +66,6 @@ var todoList = {
             }
         }
         this.displayTodos();
-
     }
 }
 
@@ -95,15 +94,10 @@ todoList.toggleAll();
 
 
 /* V8 Requirements code */
-// Refactoring code for readablity and DRY
 var handlers = {
     displayTodos: function(){
         console.log('displayTodosBtn Clicked');
         todoList.displayTodos();
-    },
-    toggleAll: function(){
-        console.log('toggleAllBtn Clicked');
-        todoList.toggleAll();
     },
     addTodo: function(){
         console.log('addTodo Clicked');
@@ -132,6 +126,10 @@ var handlers = {
         var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
         todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
         toggleCompletedPositionInput.value = '';
+    },
+    toggleAll: function(){
+        console.log('toggleAllBtn Clicked');
+        todoList.toggleAll();
     }
     
 }
