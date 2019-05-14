@@ -111,5 +111,15 @@ var handlers = {
         // console.log(addTodoTextInput.value);
        todoList.addTodo(addTodoTextInput.value);
        addTodoTextInput.value = '';
+    },
+    changeTodo: function(){
+        console.log('changeTodo Clicked');
+        var changeTodoPosition = document.getElementById('changeTodoPosition');
+        var changeTodoTextInput = document.getElementById('changeTodoTextInput');
+        //console.log(changeTodoPosition.valueAsNumber, changeTodoTextInput.value);
+        todoList.changeTodo(changeTodoPosition.valueAsNumber, changeTodoTextInput.value);
+        changeTodoPosition.value = '';
+        changeTodoTextInput.value = '';
     }
+    
 }
