@@ -92,8 +92,7 @@ todoList.deleteTodo(3);
 // lets toggleAll
 todoList.toggleAll();
 todoList.toggleAll();
-todoList.toggleAll();
-todoList.toggleAll();
+
 
 /* V8 Requirements code */
 // Refactoring code for readablity and DRY
@@ -105,5 +104,12 @@ var handlers = {
     toggleAll: function(){
         console.log('toggleAllBtn Clicked');
         todoList.toggleAll();
+    },
+    addTodo: function(){
+        console.log('addTodo Clicked');
+        var addTodoTextInput = document.getElementById('addTodoTextInput');
+        // console.log(addTodoTextInput.value);
+       todoList.addTodo(addTodoTextInput.value);
+       addTodoTextInput.value = '';
     }
 }
