@@ -78,21 +78,6 @@ todoList.addTodo('second todo');
 todoList.addTodo('third todo');
 todoList.addTodo('last todo');
 
-// It should have a function to change a todo
-todoList.changeTodo(3, 'ChangedTodo - Final todo!');
-
-// todoList.toggleCompleted should change the completed property
-todoList.toggleCompleted(0);
-todoList.toggleCompleted(3);
-
-// It should have a function to delete a todo
-todoList.deleteTodo(3);
-
-// lets toggleAll
-todoList.toggleAll();
-todoList.toggleAll();
-
-
 /* V8 Requirements code */
 var handlers = {
     displayTodos: function(){
@@ -106,6 +91,7 @@ var handlers = {
         // console.log(addTodoTextInput.value);
        todoList.addTodo(addTodoTextInput.value);
        addTodoTextInput.value = '';
+       view.displayTodos();
     },
     changeTodo: function(){
         console.log('changeTodo Clicked');
@@ -115,22 +101,26 @@ var handlers = {
         todoList.changeTodo(changeTodoPosition.valueAsNumber, changeTodoTextInput.value);
         changeTodoPosition.value = '';
         changeTodoTextInput.value = '';
+        view.displayTodos();
     },
     deleteTodo: function(){
         console.log('deleteTodo Clicked');
         var deleteTodoPosition = document.getElementById('deleteTodoPosition');
         todoList.deleteTodo(deleteTodoPosition.valueAsNumber);
         deleteTodoPosition.value = '';
+        view.displayTodos();
     },
     toggleCompleted: function(){
         console.log('toggleCompleted Clicked');
         var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
         todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
         toggleCompletedPositionInput.value = '';
+        view.displayTodos();
     },
     toggleAll: function(){
         console.log('toggleAllBtn Clicked');
         todoList.toggleAll();
+        view.displayTodos();
     }
     
 }
