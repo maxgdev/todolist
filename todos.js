@@ -124,9 +124,14 @@ var handlers = {
     deleteTodo: function(){
         console.log('deleteTodo Clicked');
         var deleteTodoPosition = document.getElementById('deleteTodoPosition');
-        console.log(deleteTodoPosition.valueAsNumber);
         todoList.deleteTodo(deleteTodoPosition.valueAsNumber);
         deleteTodoPosition.value = '';
+    },
+    toggleCompleted: function(){
+        console.log('toggleCompleted Clicked');
+        var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
+        todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
+        toggleCompletedPositionInput.value = '';
     }
     
 }
